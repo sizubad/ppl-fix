@@ -5,13 +5,10 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ url('img/c-1.jpeg') }}" class="d-block w-100" alt="carousel-1">
+                    <img src="{{ url('img/hero2.jpg') }}" class="d-block w-100" alt="carousel-1">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ url('img/c-2.jpeg') }}" class="d-block w-100" alt="carousel-2">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ url('img/c-3.jpeg') }}" class="d-block w-100" alt="carousel-3">
+                    <img src="{{ url('img/hero1.jpg') }}" class="d-block w-100" alt="carousel-2">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -26,13 +23,13 @@
 
         <div class="row justify-content-center">
             <div class="col-md-12 my-4">
-                <h2 class="text-center">Laptop / Notebook</h2>
+                <h2 class="text-center">Produk</h2>
             </div>
             @foreach ($barangs as $barang)
-                <div class="col-md-4 p-2">
+                <div class="col-md-3 p-2">
                     <div class="card">
                         <img src="{{ url('uploads') }}/{{ $barang->gambar }}" class="card-img-top"
-                            style="height: 20rem; object-fit: cover;" alt="barang">
+                            style=" object-fit: cover;" alt="barang">
                         <div class="card-body">
                             <h5 class="card-title">{{ $barang->nama_barang }}</h5>
                             <p class="card-text">

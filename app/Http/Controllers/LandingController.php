@@ -7,7 +7,7 @@ class LandingController extends Controller
     public function index()
     {
         $data = [
-            'title' => 'Comtech - Home'
+            'title' => 'Mamabi Snack'
         ];
         return view('landing', $data);
     }

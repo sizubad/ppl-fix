@@ -7,7 +7,7 @@
                     <table class="table">
                         <thead class="text-primary">
                             <th>No</th>
-                            <th>Gambar</th>
+                            <th>Gambar </th>
                             <th>Nama Barang</th>
                             <th>Harga</th>
                             <th>Stok</th>

@@ -34,9 +34,9 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{-- {{ config('app.name', 'Comtech') }} --}}
-                    <img class="d-inline-block align-middle mr-2" src="{{ url('img/logo.png') }}" width="45"
-                        alt="logo comtech"> Comtech
+                    {{-- {{ config('app.name', 'Mamabi') }} --}}
+                    <img class="d-inline-block align-middle mr-2" src="{{ url('img/ppl/logo1.png') }}" width="45"
+                        alt="logo Mamabi"> Mamabi Snack
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -98,7 +98,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('profile') }}">
-                                        Profile
+                                        Profil
                                     </a>
 
                                     <a class="dropdown-item" href="{{ url('history') }}">

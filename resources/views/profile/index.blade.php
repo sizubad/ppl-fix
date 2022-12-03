@@ -6,8 +6,8 @@
             <div class="col-md-12">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                        <li class="breadcrumb-item"><a href="{{ url('home') }}">Beranda</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Profil</li>
                     </ol>
                 </nav>
             </div>
@@ -17,7 +17,7 @@
             <div class="col-md-12 mt-4">
                 <div class="card">
                     <div class="card-body">
-                        <h4><i class="fa fa-user"></i> My Profile</h4>
+                        <h4><i class="fa fa-user"></i> Profil Saya</h4>
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
@@ -52,13 +52,13 @@
             <div class="col-md-12 mt-4">
                 <div class="card">
                     <div class="card-body">
-                        <h4><i class="fa fa-edit"></i> Edit Profile</h4>
+                        <h4><i class="fa fa-edit"></i> Sunting Profil</h4>
                         <form method="POST" action="{{ url('profile') }}">
                             @csrf
 
                             <div class="row mb-2">
                                 <label for="name"
-                                    class="col-md-2 col-form-label text-md-end">{{ __('Name') }}</label>
+                                    class="col-md-2 col-form-label text-md-end">{{ __('Nama') }}</label>
 
                                 <div class="col-md-4">
                                     <input id="name" type="text"
@@ -75,7 +75,7 @@
 
                             <div class="row mb-2">
                                 <label for="email"
-                                    class="col-md-2 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                                    class="col-md-2 col-form-label text-md-end">{{ __('Email') }}</label>
 
                                 <div class="col-md-4">
                                     <input id="email" type="email"
@@ -122,7 +122,7 @@
 
                             <div class="row mb-2">
                                 <label for="password"
-                                    class="col-md-2 col-form-label text-md-end">{{ __('Password') }}</label>
+                                    class="col-md-2 col-form-label text-md-end">{{ __('Kata Sandi') }}</label>
 
                                 <div class="col-md-4">
                                     <input id="password" type="password"
@@ -139,7 +139,7 @@
 
                             <div class="row mb-2">
                                 <label for="password-confirm"
-                                    class="col-md-2 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                                    class="col-md-2 col-form-label text-md-end">{{ __('Konfirmasi Kata Sandi') }}</label>
 
                                 <div class="col-md-4">
                                     <input id="password-confirm" type="password" class="form-control"
@@ -150,7 +150,7 @@
                             <div class="row mb-0">
                                 <div class="col-md-2 offset-md-2">
                                     <button type="submit" class="btn btn-primary">
-                                        Save
+                                        Simpan
                                     </button>
                                 </div>
                             </div>

@@ -21,14 +21,14 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#page-top">
-                <img class="d-inline-block align-middle mr-2" width="45" src="{{ url('img/logo.png') }}"
+                <img class="d-inline-block align-middle mr-2" width="100" src="{{ url('img/ppl/logo1.png') }}"
                     alt="logo">
-                <span class="text-uppercase font-weight-bold">Comtech</span>
+                <span class="text-uppercase font-weight-bold">MAMABI SNACK</span>
             </a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
 
                 </ul>
 
@@ -39,13 +39,13 @@
                                 Dashboard</a></li>
                     @else
                         <li class="btn btn-primary btn-sm rounded-pill mx-3"><a class="nav-link text-white bi bi-cart4"
-                                href="{{ url('home') }}"> Shop</a></li>
+                                href="{{ url('home') }}"> Belanja</a></li>
                     @endif
                 @else
                     <li class="nav-item btn btn-outline-primary btn-sm rounded-pill mx-3"><a class="nav-link"
-                            href="/register">Register</a></li>
+                            href="/register">Daftar</a></li>
                     <li class="btn btn-primary btn-sm rounded-pill"><a class="nav-link text-white"
-                            href="/login">Login</a></li>
+                            href="/login">Masuk</a></li>
                 @endauth
             </div>
         </div>
@@ -55,7 +55,7 @@
     </div>
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright &copy; 2022 - Comtech</div>
+            <div class="small text-center text-muted">Copyright &copy; 2022 - Mamabi Snack</div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

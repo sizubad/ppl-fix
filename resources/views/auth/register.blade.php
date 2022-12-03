@@ -83,8 +83,8 @@
                             <div class="card-body">
                                 <div class="p-4 rounded">
                                     <div class="text-center">
-                                        <img src="{{ url('img/logo.png') }}" width="50" class="mb-3" />
-                                        <h3 class="">Sign Up</h3>
+                                        <img src="{{ url('img/ppl/logo1.png') }}" width="50" class="mb-3" />
+                                        <h3 class="">Daftar</h3>
                                     </div>
                                     <div class="form-body">
                                         <form class="row g-3" action="{{ route('register') }}" method="post">
@@ -116,10 +116,10 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <label for="password" class="form-label">Password</label>
+                                                <label for="password" class="form-label">Kata Sandi</label>
                                                 <input type="password" name="password"
                                                     class="form-control @error('password') is-invalid @enderror"
-                                                    placeholder="Enter Password" value="{!! old('password') !!}">
+                                                    placeholder="Kata Sandi" value="{!! old('password') !!}">
 
                                                 @error('password')
                                                     <span class="invalid-feedback" role="alert">
@@ -129,19 +129,18 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <label for="password-confirm" class="form-label">Confirm Password</label>
+                                                <label for="password-confirm" class="form-label">Konfirmasi Kata Sandi</label>
                                                 <input id="password-confirm" type="password" name="password_confirmation"
-                                                    class="form-control" placeholder="Confirm Password">
+                                                    class="form-control" placeholder="Konfirmasi Kata Sandi">
                                             </div>
 
                                             <div class="col-12">
                                                 <div class="d-grid">
-                                                    <button type="submit" class="btn btn-primary rounded-pill">Sign
-                                                        Up</button>
+                                                    <button type="submit" class="btn btn-primary rounded-pill">Daftar</button>
                                                 </div>
                                             </div>
 
-                                            <p>Already have an account? <a href="{{ url('login') }}">Sign in here</a>
+                                            <p>Saya sudah punya akun <a href="{{ url('login') }}">Masuk</a>
                                             </p>
                                         </form>
                                     </div>

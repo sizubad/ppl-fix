@@ -21,7 +21,7 @@
                         <h3>Check Out Sukses</h3>
                         <h5>Pesanan anda sudah berhasil di check out, selanjutnya untuk pembayaran silahkan transfer ke
                             rekening : </h5>
-                        <h5><strong>Bank BCA : 12345678 - a/n PT.Comtech Indonesia</strong> dengan nominal : <strong>Rp.
+                        <h5><strong>Bank BRI : 12345678 - a/n Mamabi Snack</strong> dengan nominal : <strong>Rp.
                                 {{ number_format($pesanan->jumlah_harga + $pesanan->kode) }}</strong></h5>
                         <h5></h5>
                     </div>
