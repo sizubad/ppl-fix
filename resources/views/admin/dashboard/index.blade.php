@@ -44,6 +44,23 @@
                         <h4 class="mb-0">{{ $totalpesanan }}</h4>
                     </div>
                 </div>
+                
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="card card-statistic-1">
+                <div class="card-icon bg-success">
+                    <i class="fas fa-bag-shopping"></i>
+                </div>
+                <div class="card-wrap">
+                    <div class="card-header">
+                        <h4>Kategori</h4>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="mb-0">{{ $totalkategori }}</h4>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

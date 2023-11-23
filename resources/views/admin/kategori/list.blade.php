@@ -8,28 +8,20 @@
                         <thead class="text-primary">
                             <th>No</th>
                             <th>Gambar </th>
-                            <th>Nama Barang</th>
-                            <th>Harga</th>
-                            <th>Stok</th>
-                            <th>Keterangan</th>
                             <th>Kategori</th>
                             <th>Aksi</th>
                         </thead>
                         <tbody>
-                            @foreach ($barangs as $barang)
+                            @foreach ($kategoris as $kategori)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="{{ asset('uploads/' . $barang->gambar) }}"
-                                            alt="{{ $barang->nama_barang }}" width="100px"></td>
-                                    <td>{{ $barang->nama_barang }}</td>
-                                    <td>Rp. {{ number_format($barang->harga) }}</td>
-                                    <td>{{ $barang->stok }}</td>
-                                    <td>{{ $barang->keterangan }}</td>
-                                    <td>{{ $barang->kategori_id }}</td>
+                                    <td><img src="{{ asset('uploads/' . $kategori->gambar) }}"
+                                            alt="{{ $kategori->kategori }}" width="100px"></td>
+                                    <td>{{ $kategori->kategori }}</td>
                                     <td>
-                                        <a href="{{ url('admin/barang') }}/{{ $barang->id }}"
+                                        <a href="{{ url('admin/kategori') }}/{{ $kategori->id }}"
                                             class="btn btn-warning btn-sm">Edit</a>
-                                        <form action="{{ url('admin/barang', $barang->id) }}" method="POST"
+                                        <form action="{{ url('admin/kategori', $kategori->id) }}" method="POST"
                                             class="d-inline">
                                             @csrf
                                             @method('delete')

@@ -69,7 +69,7 @@
                     <label for="keterangan" class="col-md-2 col-form-label text-md-end">{{ __('Keterangan') }}</label>
 
                     <div class="col-md-5">
-                        <textarea name="keterangan" id="keterangan" class="form-control" @error('keterangan') is-invalid @enderror
+                        <textarea rows="10" style="height:100%;" name="keterangan" id="keterangan" class="form-control" @error('keterangan') is-invalid @enderror
                             required=""></textarea>
 
                         @error('keterangan')
@@ -79,6 +79,22 @@
                         @enderror
                     </div>
                 </div>
+                <div class="row mb-2">
+                    <label for="Kategori" class="col-md-2 col-form-label text-md-end">{{ __('Kategori') }}</label>
+                <select class="form-select col-md-5" name="kategori_id"> 
+                    <option selected>Kategori</option>
+                @if ($kategoris->isNotEmpty())
+                    @foreach($kategoris as $kategori)
+                    <option value ="{{ $kategori->id }}">{{ $kategori->kategori }}</option>
+                    @endforeach
+                @endif
+                @error('kategori')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+                </select>
+            </div>
                 <div class="row mb-0">
                     <div class="col-md-2 offset-md-2">
                         <button type="submit" class="btn btn-primary">

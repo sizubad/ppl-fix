@@ -15,8 +15,10 @@ class CreatePesananDetailsTable extends Migration
     {
         Schema::create('pesanan_details', function (Blueprint $table) {
             $table->id();
-            $table->integer('barang_id');
-            $table->integer('pesanan_id');
+            $table->unsignedBigInteger('barang_id')->nullable();
+            $table->unsignedBigInteger('pesanan_id')->nullable();
+            $table->foreign('barang_id')->references('id')->on('barangs')->onDelete('SET NULL');
+            $table->foreign('pesanan_id')->references('id')->on('pesanans')->onDelete('SET NULL');
             $table->integer('jumlah');
             $table->integer('jumlah_harga');
 

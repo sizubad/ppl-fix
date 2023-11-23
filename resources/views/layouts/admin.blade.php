@@ -51,10 +51,10 @@
             <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="{{ url('admin/dashboard') }}">Mamabi Snack</a>
+                        <a href="{{ url('admin/dashboard') }}">Pek Second</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="{{ url('admin/dashboard') }}">MS</a>
+                        <a href="{{ url('admin/dashboard') }}">PS</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}"><a class="nav-link "
@@ -72,6 +72,18 @@
                                 </li>
                                 <li class="{{ Route::currentRouteName() == 'member' ? 'active' : '' }}"><a
                                         class="nav-link" href="{{ url('admin/list-member') }}">Member</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown {{ Route::currentRouteName() == 'kategori' ? 'active' : '' }}">
+                            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                                    class="fas fa-bag-shopping"></i> <span>Kategori</span></a>
+                            <ul class="dropdown-menu">
+                                <li class="{{ Request::is('admin/tambah-kategori') ? 'active' : '' }}"><a
+                                        class="nav-link" href="{{ url('admin/tambah-kategori') }}">Tambah Kategori</a>
+                                </li>
+                                <li class="{{ Route::currentRouteName() == 'kategori' ? 'active' : '' }}"><a
+                                        class="nav-link" href="{{ url('admin/kategori') }}">List
+                                        Kategori</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown {{ Route::currentRouteName() == 'barang' ? 'active' : '' }}">
@@ -104,6 +116,7 @@
                                 <li class="{{ Route::currentRouteName() == 'selesai' ? 'active' : '' }}"><a
                                         class="nav-link" href="{{ url('admin/pesanan-selesai') }}">Selesai</a>
                                 </li>
+                                
                             </ul>
                         </li>
                     </ul>

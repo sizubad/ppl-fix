@@ -8,6 +8,7 @@ use App\Http\Controllers\PesanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\A_DashboardController;
 use App\Http\Controllers\A_BarangController;
+use App\Http\Controllers\A_KategoriController;
 use App\Http\Controllers\A_PenggunaController;
 use App\Http\Controllers\A_ProfileController;
 use App\Http\Controllers\LandingController;
@@ -71,7 +72,6 @@ Route::post('admin/profile', [A_ProfileController::class, 'update']);
 // Dashboard
 Route::get('admin/dashboard', [A_DashboardController::class, 'index'])->name('adminDashboard')->middleware('isAdmin');
 
-
 //Pengguna (Admin)
 Route::get('admin/list-admin', [A_PenggunaController::class, 'admin'])->name('admin');;
 Route::get('admin/tambah-admin', [A_PenggunaController::class, 'tambah_admin'])->name('admin');
@@ -84,6 +84,14 @@ Route::delete('admin/list-admin/{id}', [A_PenggunaController::class, 'delete_adm
 Route::get('admin/list-member', [A_PenggunaController::class, 'member'])->name('member');
 Route::delete('admin/list-member/{id}', [A_PenggunaController::class, 'delete_member']);
 
+
+//Kategori
+Route::get('admin/tambah-kategori', [A_KategoriController::class, 'create'])->name('kategori');
+Route::post('admin/tambah-kategori', [A_KategoriController::class, 'store']);
+Route::get('admin/kategori', [A_KategoriController::class, 'list'])->name('kategori');
+Route::get('admin/kategori/{id}', [A_KategoriController::class, 'edit'])->name('kategori');
+Route::post('admin/kategori/{id}', [A_KategoriController::class, 'update']);
+Route::delete('admin/bkategori/{id}', [A_KategoriController::class, 'delete']);
 
 //Barang
 Route::get('admin/tambah-barang', [A_BarangController::class, 'create'])->name('barang');
@@ -111,3 +119,5 @@ Route::get('admin/pesanan-dikirim/{id}', [A_PesananController::class, 'detail_di
 //Pesanan Diterima
 Route::get('admin/pesanan-selesai', [A_PesananController::class, 'selesai'])->name('selesai');
 Route::get('admin/pesanan-selesai/{id}', [A_PesananController::class, 'detail_pesanan'])->name('selesai');
+
+Route::get('/exportpesanan', [A_PesananController::class, 'pesananexport'])->name('exportpesanan');
