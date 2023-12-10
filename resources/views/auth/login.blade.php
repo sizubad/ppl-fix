@@ -77,7 +77,7 @@
             </div>
         </div>
     </div> --}}
-    <div class="wrapper">
+    <div class="wrapper" style="background-image: url('img/pek/bgs.jpg'); background-size: cover;"></div>
         <div class="d-flex align-items-center justify-content-center my-5 my-lg-0 vh-100">
             <div class="container-fluid">
                 <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
@@ -86,7 +86,7 @@
                             <div class="card-body">
                                 <div class="p-4 rounded">
                                     <div class="text-center">
-                                        <img src="{{ url('img/ppl/logo1.png') }}" width="50" class="mb-3" />
+                                        <img src="{{ url('img/pek/logos.png') }}" width="50" class="mb-3" />
                                         <h3 class="">Masuk</h3>
                                     </div>
                                     <div class="form-body">

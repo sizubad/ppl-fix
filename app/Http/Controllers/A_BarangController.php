@@ -28,76 +28,32 @@ class A_BarangController extends Controller
     }
 
 
-    // public function store(Request $request)
-    // {
-    //     // Validasi form
-    //     $request->validate([
-    //         'nama_barang' => 'required',
-    //         'kategori_id' => 'required|exists:kategoris,id',
-    //         'harga' => 'required|numeric',
-    //         'stok' => 'required',
-    //         'keterangan' => 'required',
-    //         'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-    //     ]);
-    
-    //     // Get the category name based on the provided category ID
-    //     $kategori = Kategori::findOrFail($request->kategori_id);
-    
-    //     // Menangkap file -> merubah nama file -> menyimpan file ke folder public/uploads
-    //     $file = $request->file('gambar');
-    //     $nama_gambar = time() . '.' . $file->getClientOriginalExtension();
-    //     $file->move('uploads', $nama_gambar);
-    
-    //     // Tambah data ke tabel barang
-    //     $barang = new Barang;
-    //     $barang->nama_barang = $request->nama_barang;
-    //     $barang->kategori_id = $request->kategori->kategori;
-    //     $barang->harga = $request->harga;
-    //     $barang->stok = $request->stok;
-    //     $barang->keterangan = $request->keterangan;
-    //     $barang->gambar = $nama_gambar;
-    //     $barang->save();
-    
-    //     // Sweet alert
-    //     Alert::success('Success', 'Data berhasil ditambahkan');
-    //     return redirect('admin/barang');
-    // }
     public function store(Request $request)
-{
-    // Validasi form
-    $request->validate([
-        'nama_barang' => 'required',
-        'kategori_id' => 'required|exists:kategoris,id', // Update the field name
-        'harga' => 'required|numeric',
-        'stok' => 'required',
-        'keterangan' => 'required',
-        'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-    ]);
-
-    // Menangkap file -> merubah nama file -> menyimpan file ke folder public/uploads
-    $file = $request->file('gambar');
-    $nama_gambar = time() . '.' . $file->getClientOriginalExtension();
-    $file->move('uploads', $nama_gambar);
-
-    // Retrieve the category based on the provided category name
-    $kategori = Kategori::where('kategori', $request->kategori)->firstOrFail();
+    {
+        // Menangkap file -> merubah nama file -> menyimpan file ke folder public/uploads
+        $file = $request->file('gambar');
+        $nama_gambar = time() . '.' . $file->getClientOriginalExtension();
+        $file->move('uploads', $nama_gambar);
+        // Tambah data ke tabel barang
+        $barang = new Barang;
+        $barang->nama_barang = $request->nama_barang;
+        $barang->kategori_id = $request->kategori_id; // Use the correct field name
+        $barang->harga = $request->harga;
+        $barang->stok = $request->stok;
+        $barang->keterangan = $request->keterangan;
+        $barang->gambar = $nama_gambar;
+        $barang->save();
     
-    // Tambah data ke tabel barang
-    $barang = new Barang;
-    $barang->nama_barang = $request->nama_barang;
-    $barang->kategori_id = $kategori->kategori; // Save the category name
-    $barang->harga = $request->harga;
-    $barang->stok = $request->stok;
-    $barang->keterangan = $request->keterangan;
-    $barang->gambar = $nama_gambar;
-    $barang->save();
-
-    // Sweet alert
-    Alert::success('Success', 'Data berhasil ditambahkan');
-    return redirect('admin/barang');
-}
+        // Validasi setelah menyimpan data
+        $request->validate([
+            'kategori_id' => 'required|exists:kategoris,id',
+        ]);
     
-
+        // Sweet alert
+        Alert::success('Success', 'Data berhasil ditambahkan');
+        return redirect('admin/barang');
+    }
+    
 
     public function list()
     {
@@ -131,7 +87,7 @@ class A_BarangController extends Controller
             'harga' => 'required|numeric',
             'stok' => 'required',
             'keterangan' => 'required',
-            'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'gambar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:999999',
         ]);
 
         $barang = Barang::find($id);

@@ -2,6 +2,12 @@
 <html lang="en">
 
 <head>
+<style>
+        .bg-image {
+            opacity: 0.3; /* Nilai opacity bisa diubah sesuai kebutuhan (dari 0 hingga 1) */
+        }
+</style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,7 +23,7 @@
     <title>{{ Request::is('login') ? 'Login' : 'Register' }}</title>
 </head>
 
-<body id="page-top">
+<body id="page-top" style="background-image: url('{{ asset('img/pek/bgburam.jpg') }}'); background-size: cover;">
     @yield('content')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>

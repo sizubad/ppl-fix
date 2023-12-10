@@ -47,6 +47,7 @@ Route::post('pesan/pesanan-diterima/{id}', [PesanController::class, 'pesan_diter
 
 // Check out
 Route::get('check-out', [PesanController::class, 'check_out']);
+Route::get('konfirmasi', [PesanController::class, 'check_out']);
 Route::delete('check-out/{id}', [PesanController::class, 'delete']);
 
 // Konfirmasi check out
@@ -61,6 +62,7 @@ Route::post('profile', [ProfileController::class, 'update']);
 Route::get('history', [HistoryController::class, 'index']);
 // detail history
 Route::get('history/{id}', [HistoryController::class, 'detail']);
+
 
 
 //Admin area -----------------------------------------------------------------------------
@@ -91,7 +93,7 @@ Route::post('admin/tambah-kategori', [A_KategoriController::class, 'store']);
 Route::get('admin/kategori', [A_KategoriController::class, 'list'])->name('kategori');
 Route::get('admin/kategori/{id}', [A_KategoriController::class, 'edit'])->name('kategori');
 Route::post('admin/kategori/{id}', [A_KategoriController::class, 'update']);
-Route::delete('admin/bkategori/{id}', [A_KategoriController::class, 'delete']);
+Route::delete('admin/kategori/{id}', [A_KategoriController::class, 'delete']);
 
 //Barang
 Route::get('admin/tambah-barang', [A_BarangController::class, 'create'])->name('barang');
@@ -121,3 +123,9 @@ Route::get('admin/pesanan-selesai', [A_PesananController::class, 'selesai'])->na
 Route::get('admin/pesanan-selesai/{id}', [A_PesananController::class, 'detail_pesanan'])->name('selesai');
 
 Route::get('/exportpesanan', [A_PesananController::class, 'pesananexport'])->name('exportpesanan');
+
+Route::get('/ongkir', 'App\Http\Controllers\CheckOngkirController@index');
+Route::post('/ongkir', 'App\Http\Controllers\CheckOngkirController@check_ongkir');
+Route::get('/cities/{province_id}', 'App\Http\Controllers\CheckOngkirController@getCities');
+
+Route::get('/konfirmasi', 'App\Http\Controllers\CheckOngkirController@index');

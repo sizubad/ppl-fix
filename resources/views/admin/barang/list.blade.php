@@ -25,7 +25,7 @@
                                     <td>Rp. {{ number_format($barang->harga) }}</td>
                                     <td>{{ $barang->stok }}</td>
                                     <td>{{ $barang->keterangan }}</td>
-                                    <td>{{ $barang->kategori_id }}</td>
+                                    <td>{{ $barang->kategori->kategori }}</td>
                                     <td>
                                         <a href="{{ url('admin/barang') }}/{{ $barang->id }}"
                                             class="btn btn-warning btn-sm">Edit</a>

@@ -21,9 +21,9 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#page-top">
-                <img class="d-inline-block align-middle mr-2" width="100" src="{{ url('img/ppl/logo1.png') }}"
+                <img class="d-inline-block align-middle mr-2" height="60px" width="px" src="{{ url('img/pek/logos.png') }}"
                     alt="logo">
-                <span class="text-uppercase font-weight-bold">MAMABI SNACK</span>
+                <span class="text-uppercase font-weight-bold ">PEK SECOND </span>
             </a>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -55,7 +55,7 @@
     </div>
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright &copy; 2022 - Mamabi Snack</div>
+            <div class="small text-center text-muted">Copyright &copy; 2023- Pek Second</div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

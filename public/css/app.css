@@ -7456,8 +7456,12 @@ fieldset:disabled .btn {
 }
 
 .justify-content-center {
-    justify-content: center !important;
+    justify-content: center;
+
+    /* height: 100vh;  */
+    /* overflow-y: auto;  */
 }
+
 
 .justify-content-between {
     justify-content: space-between !important;
@@ -11803,7 +11807,7 @@ header.home {
             rgba(92, 77, 66, 0.8) 0%,
             rgba(92, 77, 66, 0.8) 100%
         ),
-        url("../img/BG.jpg");
+        url("../img/pek/bgs.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;

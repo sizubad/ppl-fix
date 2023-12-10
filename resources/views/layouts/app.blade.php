@@ -27,6 +27,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@ttskch/select2-bootstrap4-theme@1.3.2/dist/select2-bootstrap4.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -34,9 +37,9 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    {{-- {{ config('app.name', 'Mamabi') }} --}}
-                    <img class="d-inline-block align-middle mr-2" src="{{ url('img/ppl/logo1.png') }}" width="45"
-                        alt="logo Mamabi"> Mamabi Snack
+                    {{-- {{ config('app.name', 'pek') }} --}}
+                    <img class="d-inline-block align-middle mr-2" src="{{ url('img/pek/logos.png') }}" width="45" height="40"
+                        alt="logo pek"> <strong>Pek Second</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -127,6 +130,7 @@
     </div>
 
     @include('sweetalert::alert')
+    @include('layouts.script')
 
 </body>
 

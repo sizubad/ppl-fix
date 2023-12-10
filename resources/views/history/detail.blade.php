@@ -21,7 +21,7 @@
                         <h3>Check Out Sukses</h3>
                         <h5>Pesanan anda sudah berhasil di check out, selanjutnya untuk pembayaran silahkan transfer ke
                             rekening : </h5>
-                        <h5><strong>Bank BRI : 12345678 - a/n Mamabi Snack</strong> dengan nominal : <strong>Rp.
+                        <h5><strong>Bank BRI : 12345678 - a/n Pek Second</strong> dengan nominal : <strong>Rp.
                                 {{ number_format($pesanan->jumlah_harga + $pesanan->kode) }}</strong></h5>
                         <h5></h5>
                     </div>
@@ -80,6 +80,11 @@
 
                                         <tr>
                                             <td colspan="5" align="right"><strong>Total Harga : </strong></td>
+                                            <td align="right"><strong>Rp.
+                                                    {{ number_format($pesanan->jumlah_harga) }}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" align="right"><strong>Ongkir : </strong></td>
                                             <td align="right"><strong>Rp.
                                                     {{ number_format($pesanan->jumlah_harga) }}</strong></td>
                                         </tr>
