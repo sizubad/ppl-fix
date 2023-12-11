@@ -16,26 +16,33 @@ class HistoryController extends Controller
         $this->middleware('isMember');
     }
 
-    public function index()
+    public function index( Request $request)
     {
         $data =
             [
                 'title' => 'History',
             ];
+            $datass = [
+                'biaya_ongkir' => $request->query('biaya_ongkir'),
+            ];
         $pesanans = Pesanan::where('user_id', Auth::user()->id)->where('status', '!=', 0)->get();
 
-        return view('history.index', compact('pesanans'), $data);
+        return view('history.index', compact('pesanans','datass'), $data);
     }
 
-    public function detail($id)
+    public function detail($id, Request $request)
     {
         $data =
             [
                 'title' => 'History',
+            ];
+
+            $datass = [
+                'biaya_ongkir' => $request->query('biaya_ongkir'),
             ];
         $pesanan = Pesanan::where('id', $id)->first();
         $pesanan_details = PesananDetail::where('pesanan_id', $pesanan->id)->get();
 
-        return view('history.detail', compact('pesanan', 'pesanan_details'), $data);
+        return view('history.detail', compact('pesanan', 'pesanan_details', 'datass'), $data);
     }
 }

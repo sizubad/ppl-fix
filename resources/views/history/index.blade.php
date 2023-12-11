@@ -46,7 +46,7 @@
                                                     Selesai
                                                 @endif
                                             </td>
-                                            <td>Rp. {{ number_format($pesanan->jumlah_harga + $pesanan->kode) }}</td>
+                                            <td>Rp. {{ number_format($pesanan->jumlah_harga + $pesanan->kode + $pesanan->ongkir) }}</td>
                                             <td>
                                                 @if ($pesanan->status == 3)
                                                     <a href="#" class="btn btn-success"

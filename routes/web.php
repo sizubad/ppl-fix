@@ -51,7 +51,7 @@ Route::get('konfirmasi', [PesanController::class, 'check_out']);
 Route::delete('check-out/{id}', [PesanController::class, 'delete']);
 
 // Konfirmasi check out
-Route::get('konfirmasi-check-out', [PesanController::class, 'konfirmasi']);
+Route::post('konfirmasi-check-out', [PesanController::class, 'konfirmasi']);
 
 // Profile
 Route::get('profile', [ProfileController::class, 'index']);

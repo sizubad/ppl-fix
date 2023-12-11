@@ -22,7 +22,7 @@
                         <h5>Pesanan anda sudah berhasil di check out, selanjutnya untuk pembayaran silahkan transfer ke
                             rekening : </h5>
                         <h5><strong>Bank BRI : 12345678 - a/n Pek Second</strong> dengan nominal : <strong>Rp.
-                                {{ number_format($pesanan->jumlah_harga + $pesanan->kode) }}</strong></h5>
+                                {{ number_format($pesanan->jumlah_harga + $pesanan->kode+ $pesanan->ongkir) }}</strong></h5>
                         <h5></h5>
                     </div>
                 @elseif ($pesanan->status == 2)
@@ -86,7 +86,7 @@
                                         <tr>
                                             <td colspan="5" align="right"><strong>Ongkir : </strong></td>
                                             <td align="right"><strong>Rp.
-                                                    {{ number_format($pesanan->jumlah_harga) }}</strong></td>
+                                                    {{ number_format($pesanan->ongkir) }}</strong></td>
                                         </tr>
                                         <tr>
                                             <td colspan="5" align="right"><strong>Kode Unik : </strong></td>
@@ -98,7 +98,7 @@
                                                 </strong>
                                             </td>
                                             <td align="right"><strong>Rp.
-                                                    {{ number_format($pesanan->jumlah_harga + $pesanan->kode) }}</strong>
+                                                    {{ number_format($pesanan->jumlah_harga + $pesanan->kode + $pesanan->ongkir) }}</strong>
                                             </td>
                                         </tr>
                                     </tbody>

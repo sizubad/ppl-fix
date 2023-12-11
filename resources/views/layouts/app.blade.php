@@ -130,7 +130,6 @@
     </div>
 
     @include('sweetalert::alert')
-    @include('layouts.script')
 
 </body>
 

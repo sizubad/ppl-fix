@@ -26,7 +26,7 @@
                                                 Dikirim
                                             @endif
                                         </td>
-                                        <td>Rp. {{ number_format($pesanan->jumlah_harga + $pesanan->kode) }}</td>
+                                        <td>Rp. {{ number_format($pesanan->jumlah_harga + $pesanan->kode+ $pesanan->ongkir) }}</td>
                                         <td>
                                             <a href="{{ url('admin/pesanan-dikirim') }}/{{ $pesanan->id }}"
                                                 class="btn btn-primary"><i class="fa fa-info"></i> Detail</a>

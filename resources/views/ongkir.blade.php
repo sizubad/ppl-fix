@@ -16,7 +16,7 @@
 
 <div class="container-fluid mt-5">
     <div class="row">
-        {{-- <div class="col-md-3">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h3>ORIGIN</h3>
@@ -25,10 +25,10 @@
                         <label class="font-weight-bold">PROVINSI ASAL</label>
                         <select class="form-control provinsi-asal" name="province_origin">
                             <option value="4">Bengkulu</option>
-                            {{-- @foreach ($provinces as $province => $value)
+                            @foreach ($provinces as $province => $value)
                                 <option value="{{ $province  }}">{{ $value }}</option>
-                            @endforeach --}}
-                        {{-- </select>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label class="font-weight-bold">KOTA / KABUPATEN ASAL</label>
@@ -36,7 +36,7 @@
                             <option value="62" >Bengkulu</option>
                         </select>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div> 
         <div class="col-md-3">
@@ -71,9 +71,9 @@
                         <label>PROVINSI TUJUAN</label>
                         <select class="form-control kurir" name="courier">
                             <option value="jne">JNE</option>
-                            {{-- <option value="jne">JNE</option>
-                            {{-- <option value="pos">POS</option>
-                            <option value="tiki">TIKI</option> --}}
+                            <option value="jne">JNE</option>
+                            <option value="pos">POS</option>
+                            <option value="tiki">TIKI</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -112,6 +112,7 @@
         $(".provinsi-asal , .kota-asal, .provinsi-tujuan, .kota-tujuan").select2({
             theme:'bootstrap4',width:'style',
         });
+
         //ajax select kota asal
         $('select[name="province_origin"]').on('change', function () {
             let provindeId = $(this).val();

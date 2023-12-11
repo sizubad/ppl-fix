@@ -58,6 +58,7 @@ class PesanController extends Controller
             $pesanan->tanggal = $tanggal;
             $pesanan->status = 0;
             $pesanan->jumlah_harga = 0;
+            $pesanan->ongkir=0;
             $pesanan->kode = mt_rand(100, 999);
             $pesanan->save();
         }
@@ -129,7 +130,7 @@ class PesanController extends Controller
     }
 
 
-    public function konfirmasi()
+    public function konfirmasi(Request $request)
     {
         // validasi
         $user = User::where('id', Auth::user()->id)->first();
@@ -148,6 +149,11 @@ class PesanController extends Controller
 
         $pesanan_id = $pesanan->id;
         $pesanan->status = 1;
+        // $pesanan->update();
+        $biaya_ongkir = $request->biayaOngkir;
+
+        // $pesanan = Pesanan::where('user_id', Auth::user()->id)->where('status', 0)->first();
+        $pesanan->ongkir = $biaya_ongkir;
         $pesanan->update();
 
         $pesanan_details = PesananDetail::where('pesanan_id', $pesanan_id)->get();
@@ -159,7 +165,8 @@ class PesanController extends Controller
 
         // sweet alert
         Alert::success('Success', 'Pesanan Berhasil Check Out');
-        return redirect('history/' . $pesanan_id);
+        return redirect('history/' . $pesanan_id . '?biaya_ongkir=' . $biaya_ongkir);
+        
     }
 
     

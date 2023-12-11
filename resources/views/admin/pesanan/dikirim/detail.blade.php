@@ -34,7 +34,11 @@
                                 </td>
                             </tr>
                         @endforeach
-
+                        <tr>
+                            <td colspan="5" align="right"><strong>Ongkir : </strong></td>
+                            <td align="right"><strong>Rp.
+                                    {{ number_format($pesanan->ongkir) }}</strong></td>
+                        </tr>
                         <tr>
                             <td colspan="5" align="right"><strong>Total Harga : </strong></td>
                             <td align="right"><strong>Rp.
@@ -50,7 +54,7 @@
                                 </strong>
                             </td>
                             <td align="right"><strong>Rp.
-                                    {{ number_format($pesanan->jumlah_harga + $pesanan->kode) }}</strong>
+                                    {{ number_format($pesanan->jumlah_harga + $pesanan->kode+ $pesanan->ongkir) }}</strong>
                             </td>
                         </tr>
                     </tbody>
